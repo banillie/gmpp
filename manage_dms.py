@@ -14,18 +14,17 @@ def place_in_excel(list):
     return wb
 
 
-gmpp_datamap = project_data_from_master("C:\\Users\\Standalone\\Will\\masters folder\\dms\\gmpp_dm_excel_merging_to_"
-                                        "this_one.xlsx")
+gmpp_datamap = project_data_from_master("C:\\Users\\Standalone\\Will\\masters folder\\dms\\gmpp_dm_merged_excel_master.xlsx")
 
-internal_datamap = project_data_from_master("C:\\Users\\Standalone\\Will\\masters folder\\dms\\datamap_current_internal"
-                                            ".xlsx")
+#internal_datamap = project_data_from_master("C:\\Users\\Standalone\\Will\\masters folder\\dms\\datamap_current_internal"
+#                                            ".xlsx")
 
 gmpp_keys = gmpp_datamap['sheet'].keys()
 
-internal_keys = internal_datamap['template_sheet'].keys()
+#internal_keys = internal_datamap['template_sheet'].keys()
 
-missing_keys = [x for x in internal_keys if x not in gmpp_keys]
+#missing_keys = [x for x in internal_keys if x not in gmpp_keys]
 
-output = place_in_excel(missing_keys)
+#output = place_in_excel(missing_keys)
 
-output.save("C:\\Users\\Standalone\\Will\\test.xlsx")
+#output.save("C:\\Users\\Standalone\\Will\\test.xlsx")
